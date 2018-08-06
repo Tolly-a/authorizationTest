@@ -1,0 +1,28 @@
+<header class="header header-fixed ">
+    <div class="header-block left">
+        <nav class="menu">
+            <ul class="nav metismenu">
+                <li class="active">
+                    <a [routerLink]="['/system', 'home']">
+                        <i class="fa fa-home"></i>
+                        Home
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header-block left">
+        <p>Layout for system module</p>
+    </div>
+
+    <div class="header-block-right">
+        <p class="user-name"> Hello {{user.profile.first_name}}
+            <i class="fa fa-power-off icon" (click)="onLogout()"></i>
+        </p>
+    </div>
+</header>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,62 @@
+<div class="card">
+    <div class="auth-content">
+        <p class="auth-content-title">Sing in with your Flatkit Account</p>
+
+        <div *ngIf="message.text" class="alert alert-{{message.type}}"> {{message.text}} </div>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-group" [ngClass]="{'has-error': loginForm.get('email').invalid && loginForm.get('email').touched}">
+                <label [ngClass]="(emailFocus || email.value != '') ? 'label-focus' : ''" for="email">Email</label>
+                <input type="text" class="form-control underlined" id="email" 
+                        (blur)="emailFocus = false" 
+                        (focus)="emailFocus = true" 
+                        formControlName="email" #email>
+                <span *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched" class="form-help-text">
+                    <span *ngIf="loginForm.get('email')['errors']['required']" class="form-help-text">Email can not be empty</span>
+                    <span *ngIf="loginForm.get('email')['errors']['email']" class="form-help-text">Email is incorrect</span>
+                </span>
+            </div>
+
+            <div class="form-group" [ngClass]="{'has-error': loginForm.get('password').invalid && loginForm.get('password').touched}">
+                <label  [ngClass]="(passwordFocus || password.value != '') ? 'label-focus' : ''" for="password">Password</label>
+                <input [ngClass]="{'has-error': loginForm.get('password').invalid && loginForm.get('email').touched}"
+                    type="password" class="form-control underlined"
+                    (blur)="passwordFocus = false" 
+                    (focus)="passwordFocus = true" 
+                    id="password" formControlName="password" #password>
+                <span *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched" class="form-help-text">
+                    <span *ngIf="loginForm.get('password')['errors']['required']" class="form-help-text">Password can not be empty</span>
+                    <span *ngIf="loginForm.get('password')['errors']['minlength']" class="form-help-text">Password can not be less than {{ loginForm.get('password')['errors']['minlength']['requiredLength'] }}
+                        letters</span>
+                </span>
+            </div>
+
+            <div class="form-group checkbox-area">
+                <label for="rememberMe">
+                    <input class="checkbox" 
+                        formControlName="rememberMe"
+                        id="rememberMe" type="checkbox"
+                     >
+                    <span>Keep me signed in</span>
+                </label>
+            </div>
+
+            <div class="form-group">
+                <button [disabled]="loginForm.invalid" type="submit" class="btn btn-block btn-primary">Sing in</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="form-group">
+    <p class="text-muted text-xs-center">
+        <a (click)="goToForgotPassword()">Forgot password?</a>
+    </p>
+</div>
+
+<div class="form-group">
+    <p class="text-muted text-xs-center">
+        Do not have an account?
+        <a>Sign up</a>
+    </p>
+</div>

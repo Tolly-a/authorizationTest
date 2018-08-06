@@ -1,0 +1,208 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,800,700,600);
+
+body,html{
+	padding:0;
+	margin:0;
+	height:100%;
+	min-height:100%;
+	font-family:'Open Sans',sans-serif;
+	color:#F0F0F0;
+	overflow-x:hidden
+	}
+
+	
+/* auth-content */
+.auth-content{
+	padding: 41px 30px 15px 30px;
+}
+
+.text-muted{color:#9ba8b5}
+.text-muted a{ 
+	cursor: pointer;
+	color: #00C1AB !important;
+}
+
+
+/* FORM GROUP */
+.form-group .row{
+    margin-left:-10px;
+    margin-right:-10px
+}
+.form-group .row [class^=col]{
+	padding-left:10px;padding-right:10px;
+}
+.form-group.has-error span.has-error{
+	color:#f44;font-size:13px;display:block!important;
+}
+
+
+
+.form-group.has-error .form-control-feedback{color:#f44}
+.form-group.has-warning span.has-warning{color:#fe974b;font-size:13px;display:block!important}
+.form-group.has-warning .form-control-feedback{color:#fe974b}
+.form-group.has-success span.has-success{color:#4bcf99;font-size:13px;display:block!important}
+.form-group.has-success .form-control-feedback{color:#4bcf99}.input-group{margin-bottom:10px}
+.input-group .form-control{padding-left:5px}
+.input-group span.input-group-addon{
+	font-style:italic;
+	border:none;border-radius:0;
+	border:none;
+    background-color:#d7dde4;
+    -webkit-transition:background-color ease-in-out 15s,color ease-in-out .15s;
+    transition:background-color ease-in-out 15s,color ease-in-out .15s
+}
+.form-group.has-error .form-help-text{color:#fb494d;font-size:13px}
+.form-group.has-error .form-control{border-color:#fb494d}
+
+.input-group span.input-group-addon.focus{
+    background-color:#52bcd3;
+    color:#fff;
+}
+
+.control-label, label {
+    position: relative;
+    top: 37px;
+    font-size: 16px;
+    color: #c1c1c1;
+    -webkit-transition:color ease-in-out .15s, top ease-in-out .15s, font-size ease-in-out .15s;
+    transition:color ease-in-out .15s, top ease-in-out .15s, font-size ease-in-out .15s;
+}
+.label-focus {
+    top: 7px;
+    font-size: 12px;
+    color: #00C1AB;
+}
+
+
+.form-control.underlined{
+        padding-left:0;
+        padding-right:0;border-radius:0;border:none;
+        border-radius:0;
+        box-shadow:none;
+        border-bottom:1px solid #d7dde4
+}
+
+.form-control.underlined.indented{padding:.375rem .75rem}
+.form-control.underlined:focus,
+.has-error .form-control.underlined:focus,
+.has-success .form-control.underlined:focus,
+.has-warning .form-control.underlined:focus{
+    border:none;
+    box-shadow: none;
+    border-bottom:1px solid #4bcf99
+}
+.has-error .form-control.underlined{
+	box-shadow:none;border-color:#f44;
+}
+
+.has-success .form-control.underlined{
+	box-shadow:none;border-color:#4bcf99;
+}
+
+
+.checkbox{
+	display:none;
+}
+.checkbox+span,
+.radio+span{padding:0;padding-right:10px}
+.checkbox+span:before{
+	font-family:FontAwesome;
+	font-size:21px;
+	display:inline-block;
+	vertical-align:middle;
+	letter-spacing:10px;
+	color:#c8d0da
+	}
+
+.checkbox:checked+span:before{
+	color:#4bcf99;
+}
+
+/* .checkbox:checked:disabled+span:before{
+	color:#c8d0da;
+} */
+
+.checkbox+span:before{content:"\f0c8"}
+.checkbox:checked+span:before{content:"\f14a"}
+.checkbox.rounded+span:before{content:"\f111"}
+.checkbox.rounded:checked+span:before{content:"\f058"}
+
+.form-group.checkbox-area label{
+	position: relative;
+	top: 0;
+	margin-top: 15px;
+	color: #4a4d50;
+}
+
+.auth-content-title{
+	color: #4a4d50;
+}
+
+.form-group.checkbox-area label:hover{
+	cursor:pointer;
+}
+
+input[type=checkbox] {
+	box-sizing: border-box;
+	padding: 0;
+	display: none;
+}
+
+input.checkbox:hover{
+	cursor:pointer !important;
+}
+
+.checkbox+span, .radio+span {
+	padding: 0;
+	padding-right: 10px;
+	position: relative;
+}
+
+
+/* BTN */
+
+.btn-primary{
+	color:#fff;
+	background-color:#00C1AB !important;
+	border-color:#00C1AB  !important;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary.focus,
+.btn.btn-primary:focus {
+	color:#fff;
+	background-color:#2a9488 !important;
+	border-color:#2a9488 !important;
+}
+
+.btn.btn-primary.disabled:hover,
+.btn.btn-primary:disabled:hover,
+.btn.btn-primary:disabled.focus,
+.btn.btn-primary:disabled:focus{
+	background-color:#00C1AB !important;
+	border-color:#00C1AB !important;
+}
+
+/* MEDIA */
+
+@media only screen and (max-width: 767px) {
+	.auth-container {
+		width:100%;
+		position:relative;
+		left:0;
+		top:0;
+		-webkit-transform:inherit;
+		transform:inherit;
+		margin:0;
+		margin-bottom:10px
+	}
+	.auth-container .auth-content{
+		padding:30px 25px
+	}
+
+	.card{
+		padding:3rem 10px 10px 10px !important;
+		border-radius: 0px !important;
+	}
+	
+}

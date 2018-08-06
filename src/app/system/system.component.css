@@ -1,0 +1,48 @@
+.header{
+    background-color:#d7dde4;
+    height: 45px;
+    position:absolute;
+    padding: 10px 40px;
+    left:0;
+    right:0;
+    z-index:10;
+    align-items:center;
+}
+
+.header-fixed .header{
+    position:fixed
+}
+
+.header-block{
+    display: inline-block;
+    margin-right:15px;
+}
+
+.header-block-right{
+    float: right;
+    display: block;
+    text-align: right;
+}
+
+.user-name i{
+    display:inline-block;
+    margin-left: 4px
+}
+
+.user-name i:hover{
+    color: red;
+}
+
+.container{
+    padding-top: 80px;
+}
+
+ul li{
+    text-transform: uppercase;
+}
+
+ul li a i{
+    display: inline-block;
+    margin-right: 4px;
+}
+
